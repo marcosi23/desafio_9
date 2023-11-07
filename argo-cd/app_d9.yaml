@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: argocd-example-app
+  name: desafio9_example_app
   namespace: argo-cd
 spec:
   project: default
