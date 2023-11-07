@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  nodejs-example-chart:
+  - apiVersion: v2
+    appVersion: build_2
+    created: "2023-11-07T03:13:20.712531056Z"
+    description: desafio_chart
+    digest: d70c6315ce1d80009fb7fe2736d9af6385069158c9df74f31bf806015fbb68c7
+    name: nodejs-example-chart
+    type: application
+    urls:
+    - https://github.com/marcosi23/desafio_9/releases/download/nodejs-example-chart-0.1.2/nodejs-example-chart-0.1.2.tgz
+    version: 0.1.2
+generated: "2023-11-07T03:13:20.712548157Z"
