@@ -22,7 +22,7 @@ kubectl -n argo-cd get secret argocd-initial-admin-secret -o jsonpath="{.data.pa
 ```
 4. Crear una aplicación en argoCD.
 ```bash
-cd desafio_9/argocd
+cd desafio_9/argo-cd
 kubectl apply -f app_d9.yaml
 ```
 
