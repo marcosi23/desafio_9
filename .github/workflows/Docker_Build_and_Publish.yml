@@ -25,7 +25,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
-          context: ${{ github.workspace }}//Desafio_9/DockerImages/
-          file: ${{ github.workspace }}/Desafio_9/DockerImages/Dockerfile
+          context: ${{ github.workspace }}//desafio_9/DockerImages/
+          file: ${{ github.workspace }}/desafio_9/DockerImages/Dockerfile
           push: true
           tags: marcosi23/nodejs:build_2
