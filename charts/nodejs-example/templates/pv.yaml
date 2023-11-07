@@ -1,0 +1,14 @@
+{{- if .Values.PersistentVolume.enabled -}}
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ include "helm-chart.fullname" . }}
+spec:
+  capacity:
+    storage: {{ .Values.PersistentVolume.size}}  # Asegúrate de cambiar esto según tus necesidades
+  accessModes:
+    - {{ .Values.PersistentVolume.accessMode}}
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: /data/nodejs-example-volume/
+{{- end}}

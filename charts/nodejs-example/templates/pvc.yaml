@@ -1,0 +1,12 @@
+{{- if .Values.PersistentVolumeClaim.enabled -}}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "helm-chart.fullname" . }}-pvc
+spec:
+  accessModes:
+    - {{ .Values.PersistentVolumeClaim.accessMode }}
+  resources:
+    requests:
+      storage: {{ .Values.PersistentVolumeClaim.size}} # Asegúrate de cambiar esto según tus necesidades
+{{- end}} 
