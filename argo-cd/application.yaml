@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd-example-app
+  namespace: argo-cd
+spec:
+  project: default
+  source:
+    chart: nodejs-example-chart
+    repoURL:  https://marcosi23.github.io/desafio_9/
+    targetRevision: 0.1.2
+    helm:
+      releaseName: nodejs-app
+  ## testear con el deploy de EKS
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: app-educacionit
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true # permite forzar la creacion de NS.
+    automated:
+      prune: true # permite eliminar recursos que no estan en el repo.
+      selfHeal: true # permite pisar cambios manuales y mantiene sincronizado desde el repo.
